@@ -1,0 +1,58 @@
+` <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>O, X 퀴즈 페이지</title>
+  <style>
+    /* 이미지와 버튼을 중앙 정렬하는 스타일 */
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+    }
+    /* 버튼 스타일 */
+    button {
+      font-size: 50px;
+      margin: 10px;
+      width: 300px;
+      height: 100px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    #x-btn {
+      background-color: #f44336;
+    }
+
+    .quiz {
+      font-size: 36px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="./image/12레지드레고.png" alt="사진" width="700">
+    <p style="font-size: 50px;">이 포켓몬의 이름은 뭘까요?</p>
+    <div>
+      <button id="o-btn" onclick="checkAnswer(true)">레지에레키</button>
+      <button id="x-btn" onclick="checkAnswer(false)">레지드래고</button>
+    </div>
+  </div>
+  
+  <script>
+    function checkAnswer(answer) {
+      if (answer) {
+        window.location.href = "incorrect.html";
+      } else {
+        window.location.href = "correct.html";
+      }
+    }
+  </script>
+</body>
+</html>
